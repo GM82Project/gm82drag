@@ -1,0 +1,109 @@
+{
+	"name": "Game Maker 8.2 DragFile",
+	"folder": "gm82",
+	"version": "1.0",
+	"author": "Roach && renex",
+	"date": "11-10-2021",
+	"license": "Free to use, also for commercial games.",
+	"description": "Extension to allow dropping files onto the game window.",
+	"helpfile": "",
+	"hidden": false,
+	"dependencies": [],
+	"files": [
+		{
+			"filename": "DraggerDll.dll",
+			"origname": "DraggerDll.dll",
+			"kind": 1,
+			"init": "",
+			"final": "",
+			"functions": [
+				{
+					"name": "__drag_accept",
+					"extname": "AcceptFiles",
+					"calltype": 11,
+					"helpline": "",
+					"hidden": true,
+					"argtypes": [
+						2,
+						2
+					],
+					"returntype": 2
+				},
+				{
+					"name": "__drag_count",
+					"extname": "CheckDraggedNum",
+					"calltype": 11,
+					"helpline": "",
+					"hidden": true,
+					"argtypes": [
+						2
+					],
+					"returntype": 2
+				},
+				{
+					"name": "__drag_name",
+					"extname": "CheckDraggedFname",
+					"calltype": 11,
+					"helpline": "",
+					"hidden": true,
+					"argtypes": [
+						2,
+						2
+					],
+					"returntype": 1
+				},
+				{
+					"name": "file_drag_clear",
+					"extname": "ClearLastDrop",
+					"calltype": 11,
+					"helpline": "file_drag_clear()",
+					"hidden": false,
+					"argtypes": [],
+					"returntype": 2
+				}
+			],
+			"constants": []
+		},
+		{
+			"filename": "gm82drag.gml",
+			"origname": "gm82drag.gml",
+			"kind": 2,
+			"init": "",
+			"final": "",
+			"functions": [
+				{
+					"name": "file_drag_enable",
+					"extname": "",
+					"calltype": 2,
+					"helpline": "file_drag_enable(enabled)",
+					"hidden": false,
+					"argtypes": [
+						2
+					],
+					"returntype": 2
+				},
+				{
+					"name": "file_drag_count",
+					"extname": "",
+					"calltype": 2,
+					"helpline": "file_drag_count()",
+					"hidden": false,
+					"argtypes": [],
+					"returntype": 2
+				},
+				{
+					"name": "file_drag_name",
+					"extname": "",
+					"calltype": 2,
+					"helpline": "file_drag_name(index)",
+					"hidden": false,
+					"argtypes": [
+						2
+					],
+					"returntype": 2
+				}
+			],
+			"constants": []
+		}
+	]
+}

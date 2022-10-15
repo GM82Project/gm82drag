@@ -11,8 +11,8 @@
 	"dependencies": [],
 	"files": [
 		{
-			"filename": "DraggerDll.dll",
-			"origname": "DraggerDll.dll",
+			"filename": "DraggerDLL.dll",
+			"origname": "DraggerDLL.dll",
 			"kind": 1,
 			"init": "",
 			"final": "",

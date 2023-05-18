@@ -20,9 +20,9 @@ jobs:
     - name: Download gm82gex
       run: wget https://raw.githubusercontent.com/GM82Project/gm82gex/main/gm82gex.py
     - name: Build .gex
-      run: python gm82gex.py ${{github.workspace}}/gm82chunk.gej --noinstall
+      run: python gm82gex.py ${{github.workspace}}/gm82drag.gej --noinstall
     - name: Upload artifact
       uses: actions/upload-artifact@v3
       with:
-        name: gm82chunk
-        path: gm82chunk.gex
+        name: gm82drag
+        path: gm82drag.gex

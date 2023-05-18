@@ -1,0 +1,28 @@
+name: Build .gex
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Python 3.10
+      uses: actions/setup-python@v3
+      with:
+        python-version: "3.10"
+    - name: Download gm82gex
+      run: wget https://raw.githubusercontent.com/GM82Project/gm82gex/main/gm82gex.py
+    - name: Build .gex
+      run: python gm82gex.py ${{github.workspace}}/gm82chunk.gej --noinstall
+    - name: Upload artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: gm82chunk
+        path: gm82chunk.gex

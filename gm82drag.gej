@@ -11,8 +11,8 @@
 	"dependencies": [],
 	"files": [
 		{
-			"filename": "DraggerDLL.dll",
-			"origname": "DraggerDLL.dll",
+			"filename": "gm82drag.dll",
+			"origname": "gm82drag.dll",
 			"kind": 1,
 			"init": "",
 			"final": "",

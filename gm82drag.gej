@@ -3,7 +3,7 @@
 	"folder": "gm82",
 	"version": "1.0",
 	"author": "Roach && renex",
-	"date": "11-10-2021",
+	"date": "23/07/2023",
 	"license": "Free to use, also for commercial games.",
 	"description": "Extension to allow dropping files onto the game window.",
 	"helpfile": "",
@@ -18,7 +18,7 @@
 			"final": "",
 			"functions": [
 				{
-					"name": "__drag_accept",
+					"name": "__gm82drag_accept",
 					"extname": "AcceptFiles",
 					"calltype": 11,
 					"helpline": "",
@@ -30,7 +30,7 @@
 					"returntype": 2
 				},
 				{
-					"name": "__drag_count",
+					"name": "__gm82drag_count",
 					"extname": "CheckDraggedNum",
 					"calltype": 11,
 					"helpline": "",
@@ -41,7 +41,7 @@
 					"returntype": 2
 				},
 				{
-					"name": "__drag_name",
+					"name": "__gm82drag_name",
 					"extname": "CheckDraggedFname",
 					"calltype": 11,
 					"helpline": "",
@@ -68,7 +68,7 @@
 			"filename": "gm82drag.gml",
 			"origname": "gm82drag.gml",
 			"kind": 2,
-			"init": "",
+			"init": "__gm82drag_init",
 			"final": "",
 			"functions": [
 				{
@@ -100,6 +100,15 @@
 					"argtypes": [
 						2
 					],
+					"returntype": 2
+				},
+				{
+					"name": "__gm82drag_init",
+					"extname": "",
+					"calltype": 2,
+					"helpline": "",
+					"hidden": true,
+					"argtypes": null,
 					"returntype": 2
 				}
 			],

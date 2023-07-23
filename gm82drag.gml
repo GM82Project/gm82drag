@@ -1,12 +1,20 @@
+#define __gm82drag_init
+    globalvar __gm82drag_enabled;
+
+
 #define file_drag_enable
-    __drag_accept(window_handle(),argument0)
+    if (__gm82drag_enabled!=!!argument0)
+        __gm82drag_accept(window_handle(),!!argument0)
+    __gm82drag_enabled=!!argument0
 
 
 #define file_drag_count
-    __drag_count(window_handle())
+    if (__gm82drag_enabled) return __gm82drag_count(window_handle())
+    return 0
 
 
 #define file_drag_name
-    __drag_name(window_handle(),argument0)
-
-
+    if (__gm82drag_enabled) return __gm82drag_name(window_handle(),argument0)
+    return ""
+//
+//
